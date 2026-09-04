@@ -1,4 +1,126 @@
 /* Filen her giver hjemmesiden et unikt udtryk! */
-.navbar {
-    color: blue;
+
+/* Removes margin and padding on the site */
+html,
+body {
+  background: #eaeaec;
+  margin: 0;
+  padding: auto;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+/* General Design for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0%;
+  padding: 10px 30px;
+  background-color: #222;
+  color: white;
+}
+
+.logo-elias {
+  cursor: default;
+  user-select: none;
+}
+
+/* Name */
+header p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Navbar */
+nav {
+  margin: 0;
+}
+
+/* Navigation list */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+
+  padding: 8px 12px;
+  border-radius: 6px;
+
+  /* To Get the smooth transition for when the user hovers over the menu item */
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+/* Hover effect */
+nav a:hover {
+  background-color: white;
+  color: #222;
+}
+
+main {
+  padding: auto;
+  margin: 2%;
+}
+
+/* Footer Deign */
+
+footer {
+  background-color: #222;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 20px;
+}
+
+/* Contact + Socials */
+.footer-sections {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Individual sections */
+.contact,
+.socials {
+  text-align: center;
+  cursor: auto;
+}
+
+/* Social links */
+.socials ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 40px;
+  text-align: center;
 }
