@@ -1,135 +1,415 @@
-/* Filen her giver hjemmesiden et unikt udtryk! */
+```css
+/* =========================================================
+   POVLSEN.DEV
+   ========================================================= */
 
-/* Removes margin and padding on the site */
-html,
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #eaeaec;
   margin: 0;
-  padding: auto;
+  padding: 0;
+
+  background: #eaeaec;
+  color: #222;
+
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+
+  line-height: 1.6;
 }
 
-/* General Design for the header */
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0%;
+
+  min-height: 70px;
   padding: 10px 30px;
+
   background-color: #222;
   color: white;
-  padding-left: 20%;
-  padding-right: 20%;
+
+  /* -----------------------------------------
+     Elias / Brand
+     ----------------------------------------- */
+
+  .brand {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 10px;
+
+    .logo-elias {
+      width: 48px;
+      height: 48px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+    }
+
+    p {
+      margin: 0;
+
+      color: white;
+      font-size: 1.1rem;
+    }
+  }
+
+  /* -----------------------------------------
+     Navigation
+     ----------------------------------------- */
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        a {
+          display: block;
+
+          padding: 8px 14px;
+
+          color: white;
+          text-decoration: none;
+
+          font-size: 1rem;
+
+          border-radius: 7px;
+
+          transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+
+          &:hover {
+            background-color: white;
+            color: #222;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
 }
 
-.logo-elias {
-  cursor: default;
-  user-select: none;
-}
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-/* Name */
-header p {
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-/* Navbar */
-nav {
-  margin: 0;
-}
-
-/* Navigation list */
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Navigation links */
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-
-  padding: 8px 12px;
-  border-radius: 6px;
-
-  /* To Get the smooth transition for when the user hovers over the menu item */
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-}
-
-/* Hover effect */
-nav a:hover {
-  background-color: white;
-  color: #222;
-}
-
-/* main section styling */
 main {
-  padding: 0% 20%;
-  margin: 2%;
+  width: min(100% - 40px, 1000px);
+
+  margin: 0 auto;
+  padding: 60px 0;
 }
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 section {
+  margin-bottom: 60px;
   text-align: center;
-  justify-content: center;
+
+  /* -----------------------------------------
+     Headings
+     ----------------------------------------- */
+
+  h1,
+  h2 {
+    margin-top: 0;
+    color: #222;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  /* -----------------------------------------
+     Paragraphs
+     ----------------------------------------- */
+
+  p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    color: #555;
+    font-size: 1.05rem;
+  }
+
+  /* -----------------------------------------
+     Lists
+     ----------------------------------------- */
+
+  ul {
+    margin: 25px auto;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
 }
 
-section ul {
-  list-style-type: none;
+/* =========================================================
+   QUICK FACTS TABLE
+   ========================================================= */
+
+section {
+  table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    user-select: none;
+
+    caption {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    th,
+    td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #222;
+      color: white;
+      font-weight: 600;
+    }
+
+    td {
+      color: #444;
+    }
+
+    tbody {
+    }
+  }
 }
 
-/* Footer Deign */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
-  background-color: #222;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px;
-}
 
-/* Contact + Socials */
-.footer-sections {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  width: 100%;
-}
+  padding: 45px 30px 25px;
 
-footer a {
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-footer a:hover {
+  background-color: #222;
   color: white;
+
+  /* -----------------------------------------
+     Contact + Socials
+     ----------------------------------------- */
+
+  .footer-sections {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 800px;
+
+    gap: 100px;
+
+    .contact,
+    .socials {
+      min-width: 200px;
+      user-select: none;
+      margin-bottom: 0;
+
+      text-align: center;
+
+      p {
+        margin: 5px 0;
+
+        color: #ccc;
+      }
+
+      /* Footer links */
+
+      a {
+        color: #ccc;
+
+        text-decoration: none;
+        font-weight: 500;
+
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    /* -----------------------------------------
+       Social links
+       ----------------------------------------- */
+
+    .socials {
+      ul {
+        margin: 10px 0 0;
+        padding: 0;
+
+        list-style: none;
+
+        li {
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+
+  /* -----------------------------------------
+     Copyright
+     ----------------------------------------- */
+
+  .copyright {
+    width: 100%;
+    user-select: none;
+    margin: 40px 0 0;
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #888;
+
+    border-top: 1px solid #444;
+
+    font-size: 0.9rem;
+  }
 }
 
-/* Individual sections */
-.contact,
-.socials {
-  text-align: center;
-  cursor: auto;
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+  /* Header */
+
+  header {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+
+    .brand {
+      gap: 8px;
+    }
+
+    nav {
+      ul {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 4px;
+      }
+    }
+  }
+
+  /* Main */
+
+  main {
+    width: min(100% - 30px, 1000px);
+
+    padding: 40px 0;
+  }
+
+  /* Sections */
+
+  section {
+    h1 {
+      font-size: 2.3rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Table */
+
+  section {
+    table {
+      font-size: 0.9rem;
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  }
+
+  /* Footer */
+
+  footer {
+    .footer-sections {
+      flex-direction: column;
+
+      gap: 30px;
+    }
+  }
 }
 
-/* Social links */
-.socials ul {
-  list-style: none;
-  padding: 0;
-}
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
 
-/* Copyright */
-.copyright {
-  margin-top: 40px;
-  text-align: center;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }
