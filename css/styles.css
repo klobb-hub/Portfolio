@@ -1,8 +1,23 @@
-```css
 /* =========================================================
    POVLSEN.DEV
    ========================================================= */
 
+:root {
+  --background: #f8fafc;
+  --surface: #ffffff;
+
+  --header: #0f172a;
+  --header-hover: #1e293b;
+
+  --text: #1e293b;
+  --text-secondary: #64748b;
+
+  --border: #e2e8f0;
+
+  --accent: #f8fafc;
+  --accent-hover: #f8fafc;
+  --accent-light: #dbeafe;
+}
 
 /* =========================================================
    GLOBAL
@@ -16,8 +31,8 @@ body {
   margin: 0;
   padding: 0;
 
-  background: #eaeaec;
-  color: #222;
+  background: var(--background);
+  color: var(--text);
 
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
@@ -42,7 +57,7 @@ header {
   min-height: 70px;
   padding: 10px 30px;
 
-  background-color: #222;
+  background-color: var(--header);
   color: white;
 
   /* -----------------------------------------
@@ -107,8 +122,8 @@ header {
             transform 0.2s ease;
 
           &:hover {
-            background-color: white;
-            color: #222;
+            background-color: var(--accent);
+            color: var(--header-hover);
             transform: translateY(-2px);
           }
         }
@@ -143,7 +158,7 @@ section {
   h1,
   h2 {
     margin-top: 0;
-    color: #222;
+    color: var(--text);
   }
 
   h1 {
@@ -164,7 +179,7 @@ section {
   p {
     max-width: 750px;
     margin: 0 auto 20px;
-    color: #555;
+    color: var(--text-secondary);
     font-size: 1.05rem;
   }
 
@@ -184,7 +199,7 @@ section {
 }
 
 /* =========================================================
-   QUICK FACTS TABLE
+   TABLES
    ========================================================= */
 
 section {
@@ -192,7 +207,8 @@ section {
     width: 100%;
     margin-top: 25px;
     border-collapse: collapse;
-    background: white;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
@@ -213,17 +229,28 @@ section {
     }
 
     th {
-      background: #222;
+      background: var(--header);
       color: white;
       font-weight: 600;
     }
 
     td {
-      color: #444;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
     }
+  }
+  .projects + tbody tr {
+    cursor: pointer;
+  }
 
-    tbody {
-    }
+  .projects + tbody tr:hover {
+    background-color: var(--accent-light);
+  }
+
+  .projects + tbody a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -238,7 +265,7 @@ footer {
 
   padding: 45px 30px 25px;
 
-  background-color: #222;
+  background-color: #0f172a;
   color: white;
 
   /* -----------------------------------------
@@ -271,7 +298,7 @@ footer {
       /* Footer links */
 
       a {
-        color: #ccc;
+        color: white;
 
         text-decoration: none;
         font-weight: 500;
@@ -279,7 +306,7 @@ footer {
         transition: color 0.2s ease;
 
         &:hover {
-          color: white;
+          color: var(--accent-hover);
         }
       }
     }
@@ -327,74 +354,268 @@ footer {
    ========================================================= */
 
 @media (max-width: 700px) {
-  /* Header */
+  /* =======================================================
+     HEADER
+     ======================================================= */
 
   header {
+    min-height: auto;
+
+    padding: 15px;
+
     flex-direction: column;
-
     gap: 15px;
-
-    padding: 15px 20px;
-
-    .brand {
-      gap: 8px;
-    }
-
-    nav {
-      ul {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        gap: 4px;
-      }
-    }
   }
 
-  /* Main */
+  header .brand {
+    gap: 8px;
+  }
+
+  header .brand .logo-elias {
+    width: 42px;
+    height: 42px;
+  }
+
+  header .brand p {
+    font-size: 1rem;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 5px;
+  }
+
+  header nav ul li a {
+    padding: 8px 10px;
+
+    font-size: 0.9rem;
+  }
+
+  /* =======================================================
+     MAIN
+     ======================================================= */
 
   main {
-    width: min(100% - 30px, 1000px);
+    width: calc(100% - 30px);
 
+    margin: 0 auto;
     padding: 40px 0;
   }
 
-  /* Sections */
+  /* =======================================================
+     SECTIONS
+     ======================================================= */
 
   section {
-    h1 {
-      font-size: 2.3rem;
-    }
+    margin-bottom: 45px;
 
-    h2 {
-      font-size: 1.7rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
+    text-align: center;
   }
 
-  /* Table */
+  section h1 {
+    margin-bottom: 18px;
 
-  section {
-    table {
-      font-size: 0.9rem;
-
-      th,
-      td {
-        padding: 10px;
-      }
-    }
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
-  /* Footer */
+  section h2 {
+    margin-bottom: 18px;
+
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  section p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 1rem;
+  }
+
+  /* =======================================================
+     TABLES
+     ======================================================= */
+
+  section table {
+    width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+
+    table-layout: fixed;
+  }
+
+  section table th,
+  section table td {
+    padding: 10px;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  section table th {
+    font-size: 0.9rem;
+  }
+
+  section table td {
+    font-size: 0.85rem;
+  }
+
+  section table caption {
+    padding: 0 5px;
+
+    font-size: 0.85rem;
+  }
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
 
   footer {
-    .footer-sections {
-      flex-direction: column;
+    padding: 40px 20px 25px;
+  }
 
-      gap: 30px;
-    }
+  footer .footer-sections {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+  }
+
+  footer .footer-sections .contact,
+  footer .footer-sections .socials {
+    width: 100%;
+    min-width: 0;
+
+    margin-bottom: 0;
+  }
+
+  footer .copyright {
+    margin-top: 30px;
+
+    padding-top: 18px;
+
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  /* =======================================================
+     HEADER
+     ======================================================= */
+
+  header {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  header .brand .logo-elias {
+    width: 38px;
+    height: 38px;
+  }
+
+  header .brand p {
+    font-size: 0.9rem;
+  }
+
+  header nav ul {
+    gap: 3px;
+  }
+
+  header nav ul li a {
+    padding: 7px 8px;
+
+    font-size: 0.8rem;
+  }
+
+  /* =======================================================
+     MAIN
+     ======================================================= */
+
+  main {
+    width: calc(100% - 20px);
+
+    padding: 30px 0;
+  }
+
+  /* =======================================================
+     SECTIONS
+     ======================================================= */
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  section h1 {
+    font-size: 1.7rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  section p {
+    font-size: 0.95rem;
+  }
+
+  /* =======================================================
+     TABLES
+     ======================================================= */
+
+  section table {
+    font-size: 0.8rem;
+  }
+
+  section table th,
+  section table td {
+    padding: 8px 6px;
+  }
+
+  section table th {
+    font-size: 0.8rem;
+  }
+
+  section table td {
+    font-size: 0.78rem;
+  }
+
+  section table caption {
+    font-size: 0.8rem;
+  }
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
+
+  footer {
+    padding: 35px 15px 20px;
+  }
+
+  footer .footer-sections {
+    gap: 20px;
+  }
+
+  footer .copyright {
+    margin-top: 25px;
+
+    font-size: 0.75rem;
   }
 }
 
@@ -411,5 +632,6 @@ footer {
   *::before,
   *::after {
     transition: none !important;
+    animation: none !important;
   }
 }
