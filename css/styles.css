@@ -239,19 +239,6 @@ section {
       border-bottom: 1px solid var(--border);
     }
   }
-  .projects + tbody tr {
-    cursor: pointer;
-  }
-
-  .projects + tbody tr:hover {
-    background-color: var(--accent-light);
-  }
-
-  .projects + tbody a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
 }
 
 /* =========================================================
