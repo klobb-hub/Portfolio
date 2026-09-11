@@ -162,13 +162,13 @@ section {
   }
 
   h1 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: clamp(1.3rem, 5vw, 1.8rem);
     line-height: 1.1;
   }
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 1.3rem;
   }
 
@@ -238,7 +238,7 @@ section {
       color: var(--text);
       border-bottom: 1px solid var(--border);
     }
-    }
+  }
 }
 
 /* =========================================================
