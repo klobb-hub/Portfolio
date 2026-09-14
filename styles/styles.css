@@ -145,12 +145,12 @@ td {
   padding: 0.75rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 th {
   width: 33%;
-  }
+}
 
 caption {
   margin-bottom: 0.75rem;
@@ -197,7 +197,7 @@ caption {
 
 /* =========================
    Portfolio grid
-   ========================= */}
+   ========================= */
 
 .project {
   min-width: 0;
@@ -292,7 +292,7 @@ footer {
   padding-top: 1rem;
   border-top: 1px solid var(--border);
   text-align: center;
-}}
+}
 
 /* =========================
    375px - Small mobile
