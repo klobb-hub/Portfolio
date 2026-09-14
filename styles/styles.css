@@ -179,7 +179,7 @@ caption {
 
 /* =========================
    Grid use case:
-   About / CV / general cards
+   About / CV / portfolio / general cards
    ========================= */
 
 .content-grid {
@@ -197,13 +197,7 @@ caption {
 
 /* =========================
    Portfolio grid
-   ========================= */
-
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
+   ========================= */}
 
 .project {
   min-width: 0;
@@ -349,10 +343,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .footer-sections {
     flex-direction: row;
   }
@@ -383,7 +373,7 @@ footer {
     width: 85%;
   }
 
-  .projects {
+  .content-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
