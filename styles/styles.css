@@ -147,6 +147,29 @@ td {
   overflow-wrap: break-word;
 }
 
+th:nth-child(1),
+
+td:nth-child(1) {
+
+  width: 20%;
+
+}
+
+th:nth-child(2),
+
+td:nth-child(2) {
+
+  width: 35%;
+
+}
+
+th:nth-child(3),
+
+td:nth-child(3) {
+
+  width: 45%;
+  }
+
 caption {
   margin-bottom: 0.75rem;
   text-align: left;
