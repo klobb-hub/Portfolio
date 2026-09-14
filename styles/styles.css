@@ -277,6 +277,37 @@ footer {
 }
 
 /* =========================
+   375px - Small mobile
+   ========================= */
+
+@media (max-width: 375px) {
+  main {
+    width: 92%;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+/* =========================
    768px
    ========================= */
 
