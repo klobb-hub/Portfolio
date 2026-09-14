@@ -150,6 +150,7 @@ td {
 
 th {
   width: 33%;
+  }
 
 caption {
   margin-bottom: 0.75rem;
@@ -310,7 +311,7 @@ footer {
 }
 
 /* =========================
-   768px
+   768px - Phones / Tablets
    ========================= */
 
 @media (min-width: 768px) {
@@ -338,7 +339,7 @@ footer {
 }
 
 /* =========================
-   1024px
+   1024px - Desktop
    ========================= */
 
 @media (min-width: 1024px) {
