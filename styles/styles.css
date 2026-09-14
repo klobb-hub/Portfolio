@@ -3,16 +3,13 @@
    ========================= */
 
 :root {
-  --navbar-background: #0f172a;
-  --accent: #3b82f6;
+  --navbar-footer-background: #0f172a;
   --accent-hover: #60a5fa;
   --background: #f8fafc;
   --cards: #ffffff;
   --primary-text: #1e293b;
-  --secondary-text: #64748b;
   --border: #e2e8f0;
-  --success: #10b981;
-  --footer: #ffffff;
+  --navbar-footer-text: #ffffff;
 }
 
 * {
@@ -20,7 +17,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -37,22 +34,14 @@ img {
   height: auto;
 }
 
-a {
-  color: var(--accent);
-}
-
 a:hover {
   color: var(--accent-hover);
+  transition: 0.5s;
 }
 
 nav a,
 footer a {
   color: inherit;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
 }
 
 main {
@@ -69,8 +58,8 @@ main {
 
 header {
   width: 100%;
-  background-color: var(--navbar-background);
-  color: white;
+  background-color: var(--navbar-footer-background);
+  color: var(--navbar-footer-text);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -227,8 +216,8 @@ caption {
 
 footer {
   width: 100%;
-  background: var(--navbar-background);
-  color: var(--footer);
+  background: var(--navbar-footer-background);
+  color: var(--navbar-footer-text);
   padding: 1rem 0;
 }
 
