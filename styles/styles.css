@@ -62,6 +62,7 @@ main {
   margin-inline: auto;
   padding: 1rem 0;
 }
+
 /* =========================
    Header and navigation
    ========================= */
@@ -73,9 +74,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-top: 2%;
+  padding: 0.5rem 2rem;
 }
-
 .brand {
   display: flex;
   align-items: center;
@@ -236,11 +236,11 @@ footer {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  /* gap: 1rem; */
-  align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  text-align: left;
 }
 
 .contact,
@@ -249,13 +249,12 @@ footer {
 }
 
 .contact a,
-.contact span {
+.contact span,
+.socials a {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
-  width: fit-content;
-  margin: 0 auto;
   text-decoration: none;
 }
 
@@ -265,23 +264,26 @@ footer {
   height: 20px;
 }
 
+.contact p,
+.socials p {
+  margin: 0 0 0.75rem;
+}
+
 .socials ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .socials li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .socials a {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
-  width: fit-content;
-  margin: 0 auto;
   text-decoration: none;
 }
 
@@ -323,6 +325,14 @@ footer {
   td {
     padding: 0.5rem;
   }
+
+  .footer-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .copyright {
+    width: 92%;
+  }
 }
 
 /* =========================
@@ -345,7 +355,7 @@ footer {
   }
 
   .footer-sections {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
