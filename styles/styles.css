@@ -228,6 +228,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  justify-items: center;
   align-items: start;
   text-align: left;
 }
@@ -235,15 +236,17 @@ footer {
 .contact,
 .socials {
   margin: 0;
+  text-align: center;
+  align-items: center;
 }
 
 .contact a,
 .contact span,
 .socials a {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
+    width: fit-content;
   text-decoration: none;
 }
 
