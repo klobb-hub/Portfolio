@@ -1,0 +1,332 @@
+/* =========================
+   Base styles
+   ========================= */
+
+:root {
+  --navbar-background: #0f172a;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --background: #f8fafc;
+  --cards: #ffffff;
+  --primary-text: #1e293b;
+  --secondary-text: #64748b;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --footer: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-text);
+  background: var(--background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+nav a,
+footer a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+main {
+  width: 85%;
+  max-width: 1100px;
+  min-height: 60vh;
+  margin-inline: auto;
+  padding: 1rem 0;
+}
+/* =========================
+   Header and navigation
+   ========================= */
+
+header {
+  width: 100%;
+  background-color: var(--navbar-background);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.brand p {
+  margin: 0;
+}
+
+.logo-elias {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+/* =========================
+   Main content
+   ========================= */
+
+section {
+  margin-bottom: 3rem;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+caption {
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+/* =========================
+   Grid use case:
+   About / CV / general cards
+   ========================= */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--cards);
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   Portfolio grid
+   ========================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project {
+  min-width: 0;
+  padding: 1.5rem;
+  background: var(--cards);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.project p {
+  overflow-wrap: break-word;
+}
+
+.project img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  width: 100%;
+  background: var(--navbar-background);
+  color: var(--footer);
+  padding: 1rem 0;
+}
+
+.footer-sections {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0rem;
+}
+
+.contact,
+.socials {
+  flex: 1;
+  text-align: center;
+}
+
+.contact a,
+.contact span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.contact img,
+.socials img {
+  width: 20px;
+  height: 20px;
+}
+
+.socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials li {
+  margin-bottom: 0.5rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.copyright {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+/* =========================
+   768px
+   ========================= */
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-sections {
+    flex-direction: row;
+  }
+}
+
+/* =========================
+   1024px
+   ========================= */
+
+@media (min-width: 1024px) {
+  main {
+    width: 95%;
+    padding: 1rem 0;
+  }
+
+  .brand {
+    justify-content: flex-start;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-sections,
+  .copyright {
+    width: 85%;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
