@@ -159,8 +159,18 @@ td {
     pointer-events: none;
 }
 
+
+
 .table-container table {
     min-width: 600px;
+}
+
+.scroll-hint {
+    display: block;
+    text-align: right;
+    margin-top: 0.4rem;
+    opacity: 0.7;
+    font-size: 0.85rem;
 }
 
 caption {
