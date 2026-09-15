@@ -139,7 +139,7 @@ td {
 
 .scroll-hint {
 display: block;
-    text-align: center;
+    text-align: left;
     margin-top: 0.4rem;
     opacity: 0.5;}
 
