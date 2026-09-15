@@ -138,39 +138,19 @@ td {
 }
 
 .table-container {
-  position: relative;
-    overflow-x: auto;
+  overflow-x: auto;
 }
-
-.table-container::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40px;
-    height: 100%;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--cards)
-    );
-
-    pointer-events: none;
-}
-
-
 
 .table-container table {
-    min-width: 600px;
+  min-width: 600px;
 }
 
 .scroll-hint {
-    display: block;
-    text-align: right;
-    margin-top: 0.4rem;
-    opacity: 0.7;
-    font-size: 0.85rem;
+  display: block;
+  text-align: right;
+  margin-top: 0.4rem;
+  opacity: 0.7;
+  font-size: 0.85rem;
 }
 
 caption {
