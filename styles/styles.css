@@ -97,6 +97,10 @@ section {
   margin-bottom: 3rem;
 }
 
+caption {
+  text-align: center;
+  }
+
 h1,
 h2 {
   line-height: 1.2;
