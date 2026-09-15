@@ -275,7 +275,7 @@ footer {
 /* =========================
    Desktop
    ========================= */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .content-grid {
     grid-template-columns: 1fr 1fr;
   }
