@@ -138,7 +138,25 @@ td {
 }
 
 .table-container {
+  position: relative;
     overflow-x: auto;
+}
+
+.table-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--cards)
+    );
+
+    pointer-events: none;
 }
 
 .table-container table {
