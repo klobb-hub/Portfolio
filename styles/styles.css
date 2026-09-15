@@ -140,8 +140,9 @@ td {
   padding: 0.75rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
-  white-space: nowrap;
-}
+  max-width: 300px;
+  overflow-wrap: break-word;
+}}
 
 .scroll-hint {
   display: block;
