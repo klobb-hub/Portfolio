@@ -211,6 +211,11 @@ footer {
   text-decoration: none;
 }
 
+.contact a:hover,
+.socials a:hover {
+  color: var(--blue);
+}
+
 .contact img,
 .socials img {
   width: 20px;
