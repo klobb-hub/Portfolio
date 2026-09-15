@@ -137,6 +137,14 @@ td {
   border-bottom: 1px solid var(--border);
 }
 
+.table-container {
+    overflow-x: auto;
+}
+
+.table-container table {
+    min-width: 600px;
+}
+
 caption {
   margin-bottom: 0.75rem;
   text-align: left;
