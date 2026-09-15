@@ -123,8 +123,7 @@ h2 {
 }
 
 .table-container table {
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -140,9 +139,8 @@ td {
   padding: 0.75rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
-  max-width: 300px;
   overflow-wrap: break-word;
-}}
+}
 
 .scroll-hint {
   display: block;
