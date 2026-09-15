@@ -1,76 +1,54 @@
-/* =========================
-   Base styles
-   ========================= */
+/* General */
 
 :root {
-  --navbar-footer-background: #0f172a;
-  --accent-hover: #60a5fa;
+  --dark: #0f172a;
+  --blue: #60a5fa;
   --background: #f8fafc;
-  --cards: #ffffff;
-  --primary-text: #1e293b;
+  --card: #ffffff;
+  --text: #1e293b;
   --border: #e2e8f0;
-  --navbar-footer-text: #ffffff;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: auto;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: var(--primary-text);
+  color: var(--text);
   background: var(--background);
 }
 
 img {
-  display: block;
   max-width: 100%;
   height: auto;
 }
 
 a:hover {
-  color: var(--accent-hover);
-  transition: 0.5s;
+  color: var(--blue);
 }
 
-nav a,
-footer a {
-  color: inherit;
-}
 
-main {
-  width: 85%;
-  max-width: 1600px;
-  min-height: 60vh;
-  margin-inline: auto;
-  padding: 1rem 0;
-}
-
-/* =========================
-   Header and navigation
-   ========================= */
+/* Header */
 
 header {
-  width: 100%;
-  background-color: var(--navbar-footer-background);
-  color: var(--navbar-footer-text);
+  background: var(--dark);
+  color: white;
+  padding: 0.5rem 2rem;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 2rem;
 }
+
 .brand {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.75rem;
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
@@ -85,11 +63,12 @@ header {
   object-fit: cover;
 }
 
+
+/* Navigation */
+
 nav ul {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -99,24 +78,23 @@ nav ul {
 nav a {
   display: block;
   padding: 0.5rem 0.75rem;
+  color: white;
   text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus {
-  text-decoration: solid;
-}
 
-/* =========================
-   Main content
-   ========================= */
+/* Main content */
+
+main {
+  width: 85%;
+  max-width: 1600px;
+  min-height: 60vh;
+  margin: auto;
+  padding: 1rem 0;
+}
 
 section {
   margin-bottom: 3rem;
-}
-
-article {
-  margin-bottom: 2rem;
 }
 
 h1,
@@ -124,9 +102,27 @@ h2 {
   line-height: 1.2;
 }
 
+
+/* Cards and grids */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+
+/* Tables */
+
 table {
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
 }
 
@@ -141,79 +137,41 @@ td {
   overflow-x: auto;
 }
 
-.table-container table {
-  min-width: 600px;
-}
-
 .scroll-hint {
-  display: block;
-  text-align: center;
-  margin-top: 0.4rem;
-  opacity: 0.5;
-  font-size: 0.85rem;
-}
+display: block;
+    text-align: right;
+    margin-top: 0.4rem;
+    opacity: 0.7;}
 
-caption {
-  margin-bottom: 0.75rem;
-  text-align: left;
-}
 
-/* =========================
-   Lists styling
-   ========================= */
+/* Lists */
 
 .interests-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
 }
 
 .interests-list li {
   padding: 0.6rem 1rem;
-  background: var(--cards);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
 }
 
-/* =========================
-   Grids:
-   About / CV / interests / portfolio / general cards
-   ========================= */
 
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.card {
-  min-width: 0;
-  padding: 1.25rem;
-  background: var(--cards);
-  border: 1px solid var(--border);
-}
-
-/* =========================
-   Portfolio grid
-   ========================= */
+/* Portfolio */
 
 .project {
-  min-width: 0;
   padding: 1.5rem;
-  background: var(--cards);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1.5rem;
-  align-items: start;
-}
-
-.project p {
-  overflow-wrap: break-word;
 }
 
 .project img {
@@ -222,14 +180,12 @@ caption {
   object-fit: cover;
 }
 
-/* =========================
-   Footer
-   ========================= */
+
+/* Footer */
 
 footer {
-  width: 100%;
-  background: var(--navbar-footer-background);
-  color: var(--navbar-footer-text);
+  background: var(--dark);
+  color: white;
   padding: 1rem 0;
 }
 
@@ -240,25 +196,18 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  justify-items: center;
-  align-items: start;
-  text-align: left;
-}
-
-.contact,
-.socials {
-  margin: 0;
   text-align: center;
-  align-items: center;
 }
 
 .contact a,
 .contact span,
 .socials a {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   gap: 0.5rem;
   width: fit-content;
+  margin: auto;
+  color: white;
   text-decoration: none;
 }
 
@@ -268,27 +217,14 @@ footer {
   height: 20px;
 }
 
-.contact p,
-.socials p {
-  margin: 0 0 0.75rem;
-}
-
 .socials ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .socials li {
   margin-bottom: 0.5rem;
-}
-
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  text-decoration: none;
 }
 
 .copyright {
@@ -300,9 +236,8 @@ footer {
   text-align: center;
 }
 
-/* =========================
-   375px - Small mobile
-   ========================= */
+
+/* Small screens */
 
 @media (max-width: 375px) {
   main {
@@ -317,10 +252,7 @@ footer {
     padding: 0.4rem 0.5rem;
   }
 
-  .card {
-    padding: 1rem;
-  }
-
+  .card,
   .project {
     padding: 1rem;
   }
@@ -333,52 +265,35 @@ footer {
   .footer-sections {
     grid-template-columns: 1fr;
   }
-
-  .copyright {
-    width: 92%;
-  }
 }
 
-/* =========================
-   768px - Phones / Tablets
-   ========================= */
+
+/* Tablet */
 
 @media (min-width: 768px) {
   header {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   nav ul {
     justify-content: flex-end;
   }
-
-  .footer-sections {
-    grid-template-columns: 1fr 1fr;
+  
+  .scroll-hint {
+    display: none;
   }
 }
 
-/* =========================
-   1024px - Desktop
-   ========================= */
 
-@media (min-width: 1024px) {
+/* Desktop */
+
+@media (min-width: 1200px) {
   main {
     width: 95%;
-    padding: 1rem 0;
-  }
-
-  .brand {
-    justify-content: flex-start;
-  }
-
-  .footer-sections,
-  .copyright {
-    width: 85%;
   }
 
   .content-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
